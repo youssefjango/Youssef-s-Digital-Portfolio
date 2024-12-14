@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Projects</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-category">
+            <!-- Software Development Section -->
+            <div class="foldout" onclick="toggleSection('software-dev')">
+                <h2>Software Development</h2>
+            </div>
+            <div id="software-dev" class="project-list hidden">
+                <div class="project">
+                    <h3>School Manager</h3>
+                    <p>Organizes the structure of schools, from the departments to the specific teachers.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="project">
+                    <h3>Keyboard Typer</h3>
+                    <p>Provides the speed and word accuracy of a user's typing.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="project">
+                    <h3>Race Better</h3>
+                    <p>A fun race betting game for casual enjoyment.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        
+            <!-- Web Development Section -->
+            <div class="foldout" onclick="toggleSection('web-dev')">
+                <h2>Web Development</h2>
+            </div>
+            <div id="web-dev" class="project-list hidden">
+                <div class="project">
+                    <h3>Portfolio Website</h3>
+                    <p>My own portfolio showcasing my projects and skills. This is my first website. So, it the core was mostly assisted. 
+                    However, I improved many parts to learn webdevelopment faster. 
+                    It is also to see how this method of learning will affect my learning speed.</p>
+                </div>
+            </div>
+        
+            <!-- Game Development Section -->
+            <div class="foldout" onclick="toggleSection('game-dev')">
+                <h2>Game Development</h2>
+            </div>
+            <div id="game-dev" class="project-list hidden">
+                <div class="project">
+                    <h3>GrandPa's Spell</h3>
+                    <p>A survival/puzzle game featuring a wizard.</p>
+                    <a href="https://kaidalisohaib.itch.io/grandpas-spell">Learn More</a>
+                </div>
+                <div class="project">
+                    <h3>Race Better</h3>
+                    <p>A fun race betting game for casual enjoyment.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Youssef Ben Mouny. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
