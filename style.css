@@ -1,7 +1,8 @@
 /* General Styling */
 body {
+    background: linear-gradient(60deg, #00b135, #ffc400);
     background-position: center;
-    color: #ffffff;
+    color: #000000;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
@@ -31,7 +32,7 @@ nav ul li a {
     text-decoration: none;
 }
 nav ul li a:hover {
-    color: #ff6600;
+    color: #ffffff;
 }
 
 /* About and Projects Sections */
@@ -39,7 +40,7 @@ section {
     padding: 20px;
 }
 h2 {
-    color: #590000;
+    color: #000000;
     padding-bottom: 5px;
     font-size: 2em;
 }
