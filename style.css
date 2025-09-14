@@ -90,39 +90,39 @@ h2 {
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 .favorite-games-scroll {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    width: 100%;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding: 3rem 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 .favorite-games-row {
-    display: flex;
-    gap: 20px;
-    animation: scroll-horizontal 20s linear infinite;
-}
-
-@keyframes scroll-horizontal {
-    from {
-        transform: translateX(0%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 25s linear infinite;
 }
 
 .favorite-games-row img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 12px;
-    flex-shrink: 0;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 200px;
+  margin: 0 3rem;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
 }
 
+.favorite-games-row img:hover {
+  transform: scale(1.2);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .favorite-games-row img:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
