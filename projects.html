@@ -1,109 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YBM | Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <meta name="theme-color" content="#0f172a">
 </head>
 <body>
-    <header>
-        <h1>My Projects</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-            </ul>
-        </nav>
-    </header>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
-    <main>
-        <section class="project-category">
-            <!-- Software Development Section -->
-            <div class="foldout" onclick="toggleSection('software-dev')">
-                <h2>Software Development</h2>
-            </div>
-            <div id="software-dev" class="project-list hidden">
-                <div class="project">
-                    <h3>School Manager</h3>
-                    <p>Organizes the structure of schools, from the departments to the specific teachers.</p>
-                    <a href="https://github.com/youssefjango/School-Manager">GitHub</a>
-                </div>
-                <div class="project">
-                    <h3>AI Self-Driving Car</h3>
-                    <p>Using JavaFX to display how neural network works and varies with different physics and ML parameters.</p>
-                    <a href="https://github.com/youssefjango/SelfDrivingCar_AI_Project_Prog3">GitHub</a>
-                </div>
-                <div class="project">
-                    <h3>Keyboard Typer</h3>
-                    <p>Provides the speed and word accuracy of a user's typing.</p>
-                    <a href="#">Learn More</a>
-                </div>
-            </div>
-        
-            <!-- Web Development Section -->
-            <div class="foldout" onclick="toggleSection('web-dev')">
-                <h2>Web Development</h2>
-            </div>
-            <div id="web-dev" class="project-list hidden">
-                <div class="project">
-                    <h3>Portfolio Website</h3>
-                    <p>My own portfolio showcasing my projects and skills. This is my first website. So, it the core was mostly assisted. 
-                    However, I improved many parts to learn webdevelopment faster. 
-                    It is also to see how this method of learning will affect my learning speed.</p>
-                </div>
-            </div>
-        
-            <!-- Game Development Section -->
-            <div class="foldout" onclick="toggleSection('game-dev')">
-                <h2>Game Development</h2>
-            </div>
-            <div id="game-dev" class="project-list hidden">
-                <div class="project">
-                    <h3>Light out of Memory Again</h3>
-                    <p>3D Adventure story game set in the future developped in unreal engine 5.6's nvidia development branch</p>
-                    <iframe frameborder="0" src="https://itch.io/embed/3985185?linkback=true&amp;border_width=5&amp;bg_color=ffa5a5&amp;link_color=2b00d0&amp;border_color=001fe9" width="560" height="175">
-                        <a href="https://youssefjango.itch.io/light-out-of-memory-again">Light Out Of Memory Again by Nerdo, Ro89</a>
-                    </iframe>
-                </div>
-                <div class="project">
-                    <h3>L.U.P.I.N.</h3>
-                    <p>French interactive game made in Unity under 2 day to improve reading descriptions in the Eduqclass 2025 GameJam</p>
-                    <iframe frameborder="0" src="https://itch.io/embed/3531668?border_width=5&amp;bg_color=ff8f8f&amp;fg_color=000000&amp;link_color=fa5c5c&amp;border_color=ff4343" width="560" height="175">
-                        <a href="https://youssefjango.itch.io/lupin">L.U.P.I.N. by Nerdo</a>
-                    </iframe>
-                </div>
-                <div class="project">
-                    <h3>GrandPa's Spell</h3>
-                    <p>A survival/puzzle game featuring a wizard.</p>
-                    <iframe frameborder="0" src="https://itch.io/embed/3315680?bg_color=3a009c&amp;fg_color=aeacaf&amp;link_color=fa5c5c&amp;border_color=db39ff" width="552" height="167">
-                        <a href="https://youssefjango.itch.io/grandpasspell">GrandPa's Spell by Nerdo</a>
-                    </iframe>
-                </div>
-                <div class="project">
-                    <h3>Race Better</h3>
-                    <p>A fun race betting game for casual enjoyment.</p>
-                    <a href="https://github.com/youssefjango/RaceBetter">GitHub</a>
-                </div>
-                <div class="project">
-                    <h3>ChasmED</h3>
-                    <p>2D horror game made in Dingo's GameJam 2025</p>
-                    <a href="https://mokoolb.itch.io/chasm-ed">Play</a>
-                </div>
-                <div class="project">
-                <iframe frameborder="0" src="https://itch.io/embed/3240284?bg_color=790000&amp;fg_color=000000&amp;link_color=fa5c5c&amp;border_color=4000ed" width="552" height="167">
-                    <a href="https://youssefjango.itch.io/flashlightofthedamned">Flashlight of the Damned by Nerdo, mondaydavid, ShobSabh, zarahbergeron, evandlr</a>
-                </iframe>
-                </div>
-                <div class="project">
-                    <h3>DreamGame</h3>
-                    <p>Mario Styled platformer which starts has a dream but gets darker and darker...</p>
-                    <iframe frameborder="0" src="https://itch.io/embed/3315584?bg_color=4e4e4e&amp;fg_color=ffffff&amp;link_color=6a0000&amp;border_color=6f2bb8" width="552" height="167">
-                        <a href="https://youssefjango.itch.io/dreamrunner">Dream Runner by Nerdo</a>
-                    </iframe>
-                </div>
-            </div>
-        </section>
-    </main>
+  <header class="topbar">
+    <div class="brand">
+      <h1>Youssef<span class="accent">.</span></h1>
+      <div class="tag">Software Engineering Student and Game Developper</div>
+    </div>
+    <button id="menu-toggle" class="menu-btn" aria-label="Toggle menu">☰</button>
+    <nav id="main-nav" class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="biography.html">About</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-category">
+      <!-- Software Development Section -->
+      <div class="foldout" data-target="software-dev"><h2>Software Development</h2></div>
+      <div id="software-dev" class="project-list hidden">
+        <div class="foldout" data-target="proj-school-manager">School Manager</div>
+        <div id="proj-school-manager" class="project-detail hidden">
+          <p>Organizes the structure of schools, from the departments to the specific teachers.</p>
+          <a class="btn small" href="https://github.com/youssefjango/School-Manager" target="_blank">GitHub</a>
+        </div>
+
+        <div class="foldout" data-target="proj-ai-car">AI Self-Driving Car</div>
+        <div id="proj-ai-car" class="project-detail hidden">
+          <p>Using JavaFX to display how neural network works and varies with different physics and ML parameters.</p>
+          <a class="btn small" href="https://github.com/youssefjango/SelfDrivingCar_AI_Project_Prog3" target="_blank">GitHub</a>
+        </div>
+
+        <div class="foldout" data-target="proj-keyboard-typer">Keyboard Typer</div>
+        <div id="proj-keyboard-typer" class="project-detail hidden">
+          <p>Provides the speed and word accuracy of a user's typing.</p>
+          <a class="btn small" href="#">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Web Development Section -->
+      <div class="foldout" data-target="web-dev"><h2>Web Development</h2></div>
+      <div id="web-dev" class="project-list hidden">
+        <div class="foldout" data-target="proj-portfolio-site">Portfolio Website</div>
+        <div id="proj-portfolio-site" class="project-detail hidden">
+          <p>My own portfolio showcasing my projects and skills. First website — improved many parts to learn web development faster.</p>
+        </div>
+      </div>
+
+      <!-- Game Development Section -->
+      <div class="foldout" data-target="game-dev"><h2>Game Development</h2></div>
+      <div id="game-dev" class="project-list hidden">
+        <div class="foldout" data-target="proj-light-out-memory">Light out of Memory Again</div>
+        <div id="proj-light-out-memory" class="project-detail hidden">
+          <p>3D Adventure story game set in the future developed in Unreal Engine 5.6 (NVIDIA branch).</p>
+          <iframe frameborder="0" src="https://itch.io/embed/3985185?linkback=true&amp;border_width=5&amp;bg_color=ffa5a5&amp;link_color=2b00d0&amp;border_color=001fe9" width="560" height="175">
+            <a href="https://youssefjango.itch.io/light-out-of-memory-again" target="_blank">Light Out Of Memory Again by Nerdo, Ro89</a>
+          </iframe>
+        </div>
+
+        <div class="foldout" data-target="proj-lupin">L.U.P.I.N.</div>
+        <div id="proj-lupin" class="project-detail hidden">
+          <p>French interactive game made in Unity in 2 days to improve reading descriptions (Eduqclass 2025 GameJam).</p>
+          <iframe frameborder="0" src="https://itch.io/embed/3531668?border_width=5&amp;bg_color=ff8f8f&amp;fg_color=000000&amp;link_color=fa5c5c&amp;border_color=ff4343" width="560" height="175">
+            <a href="https://youssefjango.itch.io/lupin" target="_blank">L.U.P.I.N. by Nerdo</a>
+          </iframe>
+        </div>
+
+        <div class="foldout" data-target="proj-grandpas-spell">GrandPa's Spell</div>
+        <div id="proj-grandpas-spell" class="project-detail hidden">
+          <p>A survival/puzzle game featuring a wizard.</p>
+          <iframe frameborder="0" src="https://itch.io/embed/3315680?bg_color=3a009c&amp;fg_color=aeacaf&amp;link_color=fa5c5c&amp;border_color=db39ff" width="552" height="167">
+            <a href="https://youssefjango.itch.io/grandpasspell" target="_blank">GrandPa's Spell by Nerdo</a>
+          </iframe>
+        </div>
+
+        <div class="foldout" data-target="proj-race-better">Race Better</div>
+        <div id="proj-race-better" class="project-detail hidden">
+          <p>A fun race betting game for casual enjoyment.</p>
+          <a class="btn small" href="https://github.com/youssefjango/RaceBetter" target="_blank">GitHub</a>
+        </div>
+
+        <div class="foldout" data-target="proj-chasmed">ChasmED</div>
+        <div id="proj-chasmed" class="project-detail hidden">
+          <p>2D horror game made in Dingo's GameJam 2025.</p>
+          <a class="btn small" href="https://mokoolb.itch.io/chasm-ed" target="_blank">Play</a>
+        </div>
+
+        <div class="foldout" data-target="proj-flashlight-damned">Flashlight of the Damned</div>
+        <div id="proj-flashlight-damned" class="project-detail hidden">
+          <iframe frameborder="0" src="https://itch.io/embed/3240284?bg_color=790000&amp;fg_color=000000&amp;link_color=fa5c5c&amp;border_color=4000ed" width="552" height="167">
+            <a href="https://youssefjango.itch.io/flashlightofthedamned" target="_blank">Flashlight of the Damned by Nerdo, mondaydavid, ShobSabh, zarahbergeron, evandlr</a>
+          </iframe>
+        </div>
+
+        <div class="foldout" data-target="proj-dreamgame">DreamGame</div>
+        <div id="proj-dreamgame" class="project-detail hidden">
+          <p>Mario-styled platformer which starts as a dream but gets darker...</p>
+          <iframe frameborder="0" src="https://itch.io/embed/3315584?bg_color=4e4e4e&amp;fg_color=ffffff&amp;link_color=6a0000&amp;border_color=6f2bb8" width="552" height="167">
+            <a href="https://youssefjango.itch.io/dreamrunner" target="_blank">Dream Runner by Nerdo</a>
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
 </body>
-</html>    
+</html>

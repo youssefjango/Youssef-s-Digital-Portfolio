@@ -5,20 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YBM | Biography</title>
     <link rel="stylesheet" href="style.css">
-    <script src="animationGameSlider.js"></script>
+    <meta name="theme-color" content="#0f172a">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Biography</h1>
-        <nav>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <header class="topbar">
+        <div class="brand">
+            <h1>Youssef<span class="accent">.</span></h1>
+            <div class="tag">Dev & Game Maker</div>
+        </div>
+        <button id="menu-toggle" class="menu-btn" aria-label="Toggle menu">☰</button>
+        <nav id="main-nav" class="nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="resume.html">Resume</a></li>
             </ul>
         </nav>
     </header>
-    <section>
-        <h2>Biography</h2>
-        <article>
+
+    <main>
+        <section class="card">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:youssef.benmouny@mail.mcgill.ca" class="contacts">youssef.benmouny@mail.mcgill.ca</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/youssefbenmouny/" class="contacts" target="_blank">My LinkedIn</a></p>
+            <p>Phone: <a href="tel:+14389222808">+1 (438) 922-2808</a></p>
+        </section>
+
+        <section class="card">
+            <article>
             <h3>My Interest in Computers During my Youth</h3>
             <p>As I grew up, my interest in video games has been very early in my life. 
                 I was born in Morocco, and my parents used to bring me in a game center. 
@@ -47,6 +65,9 @@
             </div>
       </div>
         </article>
-    </section>
+        </section>
+    </main>
+
+    <footer class="site-footer"><small>© Youssef Ben Mouny</small></footer>
 </body>
 </html>

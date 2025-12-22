@@ -1,177 +1,105 @@
-/* General Styling */
-body {
-    background: linear-gradient(135deg, #2e026d, #6d28d9, #a855f7);
-    color: #f3f4f6;
-    font-family: 'Poppins', 'Comic Neue', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+:root{
+  --bg-1: #071129;
+  --bg-2: #0f172a;
+  --accent: #7c3aed;
+  --accent-2: #06b6d4;
+  --muted: #9aa4b2;
+  --card: rgba(255,255,255,0.04);
+  --glass: rgba(255,255,255,0.03);
 }
 
-/* Header */
-header {
-    background: linear-gradient(90deg, #3b0764, #9333ea);
-    padding: 25px;
-    text-align: center;
-    border-bottom: 4px solid #06b6d4;
-    border-radius: 0 0 15px 15px;
-}
-header h1 {
-    color: #e879f9;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 15px 0 0;
-}
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-nav ul li a {
-    color: #f3f4f6;
-    background: rgba(147, 51, 234, 0.2);
-    padding: 8px 14px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-nav ul li a:hover {
-    background: #06b6d4;
-    color: #1e1b29;
-    transform: translateY(-3px);
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  color:#e6eef8;
+  -webkit-font-smoothing:antialiased;
 }
 
-/* Section Titles */
-h2 {
-    color: #e879f9;
-    font-size: 2em;
-    margin-bottom: 10px;
-    border-left: 6px solid #06b6d4;
-    padding-left: 12px;
+#bg-canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
+
+.topbar{
+  position:relative;
+  z-index:10;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:16px 24px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), transparent);
+  backdrop-filter: blur(6px);
 }
 
-/* Project Cards */
-.project {
-    margin: 20px 0;
-    border-radius: 15px;
-    padding: 20px;
-    background: #1e1b29;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.project:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.5);
-}
-.project img {
-    max-width: 100%;
-    border-radius: 10px;
-    border: 3px solid #9333ea;
-}
-.project h3 {
-    color: #06b6d4;
-    margin-top: 10px;
-}
-.project a {
-    color: #e879f9;
-    font-weight: 600;
-}
-.project a:hover {
-    color: #06b6d4;
+.brand h1{margin:0;font-weight:700;font-size:1.25rem;display:flex;gap:.5rem}
+.brand .accent{color:var(--accent);margin-left:.25rem}
+.brand .tag{font-size:.8rem;color:var(--muted);margin-top:4px}
+
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:12px}
+.nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
+.nav a:hover{color:#fff;background:linear-gradient(90deg, rgba(124,58,237,0.12), rgba(6,182,212,0.06))}
+.menu-btn{display:none;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:6px 10px;border-radius:8px}
+
+main{position:relative;z-index:5;padding:40px 24px 80px;max-width:1100px;margin:0 auto}
+
+.hero{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:48px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 6px 30px rgba(2,6,23,0.6);position:relative;overflow:hidden}
+.hero-inner{max-width:60%}
+.hero-title{font-size:1.9rem;margin:0 0 12px;font-weight:700}
+.hero-sub{color:var(--muted);margin:0 0 18px}
+.hero-ctas{display:flex;gap:12px}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;color:#071129;background:rgba(255,255,255,0.95);font-weight:700}
+.btn.small{padding:8px 10px;font-size:.9rem}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff}
+
+.hero-decor{position:absolute;right:20px;bottom:-10px;opacity:.9}
+.gamepad{font-family:'Press Start 2P',monospace;font-size:58px;color:rgba(255,255,255,0.06);transform:rotate(-10deg)}
+.pixel-dot{width:10px;height:10px;background:var(--accent);box-shadow:0 0 12px var(--accent);border-radius:3px;margin-top:10px}
+
+.card-section{display:grid;grid-template-columns:1fr 340px;gap:18px;margin-top:28px}
+.card{background:var(--card);padding:18px;border-radius:12px}
+.card h3{margin-top:0}
+
+.projects-grid{margin-top:28px}
+.section-title{color:var(--accent);margin:0 0 16px;font-weight:700}
+.projects-grid .project{display:flex;gap:18px;background:var(--glass);padding:12px;border-radius:12px;align-items:center}
+.projects-grid img{width:220px;height:auto;border-radius:10px;border:2px solid rgba(255,255,255,0.04)}
+.project-body h4{margin:0 0 8px}
+
+.favorite-games-scroll{overflow:hidden;white-space:nowrap;padding:16px 0}
+.favorite-games-row{display:inline-block;white-space:nowrap;animation:scroll 20s linear infinite}
+.favorite-games-row img{height:120px;margin:0 24px;border-radius:8px;transition:transform .25s ease}
+.favorite-games-row img:hover{transform:scale(1.08)}
+
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+.site-footer{text-align:center;padding:36px 12px;color:var(--muted)}
+
+.contacts{color:#9fbcd8;font-weight:700}
+
+/* Foldout / Accordion styles for project page */
+.foldout{position:relative;cursor:pointer;padding:12px 16px;border-radius:10px;background:rgba(255,255,255,0.04);margin:12px 0;user-select:none}
+.foldout:hover{background:rgba(255,255,255,0.06)}
+.foldout::after{content:'▸';position:absolute;right:14px;top:50%;transform:translateY(-50%) rotate(0deg);transition:transform .25s ease;opacity:.9;color:var(--muted)}
+.foldout.open::after{transform:translateY(-50%) rotate(90deg);color:#fff}
+.project-list{margin:6px 0 18px}
+.project-list.hidden{display:none}
+.project-detail{background:var(--glass);border-radius:10px;padding:12px;margin:8px 0}
+.project-detail.hidden{display:none}
+.project-detail iframe{max-width:100%;border-radius:8px}
+.project-detail a.btn{margin-top:8px}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-inner{max-width:100%}
+  .hero{flex-direction:column;align-items:flex-start}
+  .card-section{grid-template-columns:1fr}
+  .nav{position:absolute;top:64px;right:16px;background:rgba(15,23,42,0.95);padding:12px;border-radius:8px;display:none}
+  .nav.open{display:block}
+  .menu-btn{display:inline-block}
 }
 
-
-.foldout:hover {
-    transform: scale(1.03) rotate(-1deg);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-.favorite-games-scroll {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  padding: 3rem 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-}
-
-.favorite-games-row {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scroll 25s linear infinite;
-}
-
-.favorite-games-row img {
-  height: 200px;
-  margin: 0 3rem;
-  vertical-align: middle;
-  transition: transform 0.3s ease;
-}
-
-.favorite-games-row img:hover {
-  transform: scale(1.2);
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-.favorite-games-row img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-.project-list.hidden {
-  display: none;
-}
-
-/* OPTIONAL: If you want a smooth vertical reveal, use max-height instead of display.
-   Uncomment this block and remove the simple display:none above.
-
-.project-list {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.35s ease;
-}
-.project-list:not(.hidden) {
-  max-height: 2000px;  // big enough to fit content
-}
-*/
-
-/* OPTIONAL: Add an arrow indicator to foldouts */
-.foldout {
-  position: relative;
-  cursor: pointer;
-  padding: 12px 20px;
-  user-select: none;
-}
-
-.foldout::after {
-  content: '▸';
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%) rotate(0deg);
-  transition: transform 0.25s ease;
-  font-size: 0.8em;
-  opacity: 0.9;
-}
-
-/* When its associated section is open, rotate arrow
-   (Needs JS enhancement OR use a data-open attribute approach).
-   A simple approach: add a class like 'open' to the foldout when toggled.
-   See optional JS snippet below.
-*/
-.foldout.open::after {
-  transform: translateY(-50%) rotate(90deg);
-}
-.contacts {
-  color: black;
-  font-weight: bold;
+@media (max-width:480px){
+  .hero-title{font-size:1.2rem}
+  .menu-btn{font-size:18px}
 }

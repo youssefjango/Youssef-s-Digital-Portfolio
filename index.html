@@ -5,45 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YBM | Your Future Software Engineer</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#0f172a">
 </head>
 <body>
-    <header>
-        <h1>Youssef Ben Mouny</h1>
-        <nav>
-            <ul class="menu">
-                <li><a href="biography.html">Biography</a></li>
-                <li><a href="education.html">Education</a></li>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <header class="topbar">
+        <div class="brand">
+            <h1>Youssef<span class="accent">.</span></h1>
+            <div class="tag">Software Engineering Student and Game Developper</div>
+        </div>
+
+        <button id="menu-toggle" class="menu-btn" aria-label="Toggle menu">☰</button>
+
+        <nav id="main-nav" class="nav">
+            <ul>
+                <li><a href="biography.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="resume.html">Resume</a></li>
             </ul>
         </nav>
     </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>👋 Hello! I'm Youssef Ben Mouny, and this is my portfolio. Discover my projects, education, certificates, and blog below!
-            I am planning on improving this website throughout my journey in webdevelopment. For now, I am currently focused on making video games,
-            learning more about Artificial Intelligence and cloud computing. 
-        </p>
-    </section>
 
-    <section id="Projects">
-        <h2>Recent Project</h2>
-        <div class="project">
-            <h3>ChasmED</h3>
-            <img src="images/GameJamChasmed.png" alt="ChasmED">
-            <p>2D horror game featuring a person that is trying to collect diamonds 
-                for a man who has kidnapped his family. 
-                These diamonds have powerful usage such as increasing the heights of the one possesing them.  
-                <a href="https://github.com/youssefjango/GameJam2025">Learn more</a>
-            </p>
-        </div>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="hero-inner">
+                <h2 class="hero-title">Hi, I'm Youssef! I love to build games and other fun projects.</h2>
+                <p class="hero-sub">Welcome to my portfolio website! You can find here most of my recent projects.</p>
+                <div class="hero-ctas">
+                    <a class="btn primary" href="projects.html">See Projects</a>
+                    <a class="btn" href="biography.html">My Story</a>
+                    <a class="btn" href="resume.html">Download CV</a>
+                </div>
+            </div>
+            <div class="hero-decor">
+                <div class="gamepad">▣</div>
+                <div class="pixel-dot"></div>
+            </div>
+        </section>
 
+        <section id="about" class="card-section">
+            <div class="card">
+                <h3>About Me</h3>
+                <p>👋 Hello! I'm Youssef Ben Mouny. I focus on making video games and learning low-level programming.</p>
+            </div>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:youssef.benmouny@mail.mcgill.ca" class="contacts">youssef.benmouny@mail.mcgill.ca</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/youssefbenmouny/" class="contacts" target="_blank">My LinkedIn</a></p>
-        <p>Github: <a href="https://github.com/youssefjango" class="contacts" target="_blank">youssefjango</a></p>
-    </section>
+            <div class="card">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:youssef.benmouny@mail.mcgill.ca" class="contacts">youssef.benmouny@mail.mcgill.ca</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/youssefbenmouny/" class="contacts" target="_blank">My LinkedIn</a></p>
+                <p>Github: <a href="https://github.com/youssefjango" class="contacts" target="_blank">youssefjango</a></p>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-grid">
+            <h3 class="section-title">Recent Project</h3>
+            <article class="project">
+                <img src="images/GameJamChasmed.png" alt="ChasmED">
+                <div class="project-body">
+                    <h4>ChasmED</h4>
+                    <p>2D horror game where the protagonist collects diamonds to save their family — built during Game Jam 2025.</p>
+                    <a href="https://github.com/youssefjango/GameJam2025" class="btn small" target="_blank">Learn more</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="favorites">
+            <h3 class="section-title">Favorite Games</h3>
+            <div class="favorite-games-scroll">
+          <div class="favorite-games-row">
+              <img src="images/GameJamChasmed.png">
+              <img src="images/GameJamChasmed.png" >
+              <img src="images/GameJamChasmed.png" >
+              <img src="images/GameJamChasmed.png" >
+              <img src="images/GameJamChasmed.png">
+              <img src="images/GameJamChasmed.png" >
+              <img src="images/GameJamChasmed.png" >
+              <img src="images/GameJamChasmed.png" >
+          
+            </div>
+      </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <small>© Youssef Ben Mouny — Built with a love for games.</small>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
