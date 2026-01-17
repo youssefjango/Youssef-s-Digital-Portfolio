@@ -12,6 +12,19 @@ function toggleSection(sectionId) {
 
 // Menu toggle for small screens and other UI behaviors
 document.addEventListener('DOMContentLoaded', () => {
+  // If previewing via file://, rewrite folder links to index.html
+  if (location.protocol === 'file:') {
+    document.querySelectorAll('a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      // skip absolute URLs and special schemes
+      if (/^[a-zA-Z]+:\/\//.test(href) || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+      if (href === './' || href === '../' || href.endsWith('/')) {
+        a.setAttribute('href', href + 'index.html');
+      }
+    });
+  }
+
   // foldouts
   document.querySelectorAll('.foldout').forEach(f => {
     f.addEventListener('click', () => {

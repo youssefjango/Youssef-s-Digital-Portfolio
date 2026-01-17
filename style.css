@@ -89,6 +89,21 @@ main{position:relative;z-index:5;padding:40px 24px 80px;max-width:1100px;margin:
 .project-detail iframe{max-width:100%;border-radius:8px}
 .project-detail a.btn{margin-top:8px}
 
+/* Game cards reveal + tilt */
+.project-list{perspective:800px}
+.game-card{opacity:0;transform:translateY(8px);will-change:transform;transition:opacity 400ms ease, transform 500ms cubic-bezier(.2,.7,.2,1);transition-delay:var(--stagger,0ms)}
+.game-card.is-visible{opacity:1;transform:none}
+
+/* Certifications layout */
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:12px}
+.cert-card{background:var(--glass);border-radius:12px;padding:14px}
+.cert-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:8px}
+.cert-card img{width:100%;height:auto;border-radius:10px;border:2px solid rgba(255,255,255,0.04)}
+.cert-actions{margin-top:8px}
+.cert-badges{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;background:rgba(124,58,237,0.18);color:#cbd5e1;font-weight:600;font-size:.8rem}
+.cert-details summary{cursor:pointer;color:#cbd5e1;font-weight:600;margin-top:6px}
+
 /* Responsive */
 @media (max-width:900px){
   .hero-inner{max-width:100%}
@@ -102,4 +117,5 @@ main{position:relative;z-index:5;padding:40px 24px 80px;max-width:1100px;margin:
 @media (max-width:480px){
   .hero-title{font-size:1.2rem}
   .menu-btn{font-size:18px}
+  .cert-grid{grid-template-columns:1fr}
 }

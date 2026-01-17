@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YBM | Projects</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="../script.js"></script>
+  <script defer src="../games-animation.js"></script>
   <meta name="theme-color" content="#0f172a">
 </head>
 
@@ -14,20 +15,23 @@
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
   <header class="topbar">
-    <div class="brand">
-      <h1>Youssef<span class="accent">.</span></h1>
-      <div class="tag">Software Engineering Student and Game Developper</div>
-    </div>
-    <button id="menu-toggle" class="menu-btn" aria-label="Toggle menu">☰</button>
-    <nav id="main-nav" class="nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="biography.html">About</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="resume.html">Resume</a></li>
-      </ul>
-    </nav>
-  </header>
+        <div class="brand">
+            <h1>Youssef<span class="accent">.</span></h1>
+            <div class="tag">Software Engineering Student and Game Developer</div>
+        </div>
+
+        <button id="menu-toggle" class="menu-btn" aria-label="Toggle menu">☰</button>
+
+        <nav id="main-nav" class="nav">
+            <ul>
+                <li><a href="../biography/">About</a></li>
+                <li><a href="../projects/">Projects</a></li>
+                <li><a href="../education/">Education</a></li>
+                <li><a href="../certificates/">Certificates</a></li>
+                <li><a href="../resume/">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
 
   <main>
     <section class="project-category">
@@ -39,14 +43,14 @@
         <div class="foldout" data-target="proj-school-manager">School Manager</div>
         <div id="proj-school-manager" class="project-detail hidden">
           <p>Organizes the structure of schools, from the departments to the specific teachers.</p>
-          <a class="btn small" href="https://github.com/youssefjango/School-Manager" target="_blank">GitHub</a>
+          <a class="btn small" href="https://github.com/youssefjango/School-Manager" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
 
         <div class="foldout" data-target="proj-ai-car">AI Self-Driving Car</div>
         <div id="proj-ai-car" class="project-detail hidden">
           <p>Using JavaFX to display how neural network works and varies with different physics and ML parameters.</p>
           <a class="btn small" href="https://github.com/youssefjango/SelfDrivingCar_AI_Project_Prog3"
-            target="_blank">GitHub</a>
+            target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
 
         <div class="foldout" data-target="proj-keyboard-typer">Keyboard Typer</div>
@@ -72,37 +76,58 @@
       <div class="foldout" data-target="game-dev">
         <h2>Game Development</h2>
       </div>
+
       <div id="game-dev" class="project-list hidden">
+
+        <div class="foldout" data-target="proj-asylum-huggers">Asylum Huggers</div>
+        <div id="proj-asylum-huggers" class="project-detail hidden">
+          <p>A game where a clown is in an asylum to fight against his emotions (or try to accept them) 
+            to get released</p>
+          <iframe frameborder="0" src="https://itch.io/embed/4189516?border_width=5&amp;bg_color=7b00e4&amp;
+          fg_color=08ff30&amp;link_color=000000&amp;border_color=6dd60c" width="560" height="175">
+            <a href="https://mokoolb.itch.io/asylum-huggers">Asylum Huggers by mokoolb, Nerdo</a>
+          </iframe>
+        </div>
+
+
         <div class="foldout" data-target="proj-tank3d">Tank Trouble 3D</div>
         <div id="proj-tank3d" class="project-detail hidden">
           <p>3D tank arena game</p>
+          <iframe frameborder="0" src="https://itch.io/embed/3956349?border_width=5&amp;
+          bg_color=933600&amp;fg_color=ff690c&amp;link_color=410000&amp;border_color=d69939" width="560" height="175">
+            <a href="https://youssefjango.itch.io/tanktrouble">TankTrouble3D by Nerdo</a>
+        </iframe>
         </div>
 
         <div class="foldout" data-target="proj-retro-pong">Retro Pong</div>
-        <div id="proj-retro-pong" class="project-detail hidden">
+        <div id="proj-retro-pong" class="project-detail game-card hidden" data-game="retro-pong">
           <p>C++ project using the Win32API to create a very basic engine, Will you be able to
             beat the computer(or your friend(s))' paddle?.</p>
+            <iframe frameborder="0" src="https://itch.io/embed/4150956?border_width=5&amp;bg_color=4f6781&amp;
+            fg_color=fb922b&amp;link_color=fa5c5c&amp;border_color=08f2ff" width="560" height="175">
+                <a href="https://youssefjango.itch.io/retro-pong">Retro Pong by Nerdo</a>
+            </iframe>
         </div>
 
         <div class="foldout" data-target="proj-light-out-memory">Light out of Memory Again</div>
-        <div id="proj-light-out-memory" class="project-detail hidden">
+        <div id="proj-light-out-memory" class="project-detail game-card hidden" data-game="light-out-memory">
           <p>3D Adventure story game set in the future developed in Unreal Engine 5.6 (NVIDIA branch).</p>
           <iframe frameborder="0"
             src="https://itch.io/embed/3985185?linkback=true&amp;border_width=5&amp;bg_color=ffa5a5&amp;link_color=2b00d0&amp;border_color=001fe9"
             width="560" height="175">
-            <a href="https://youssefjango.itch.io/light-out-of-memory-again" target="_blank">Light Out Of Memory
+            <a href="https://youssefjango.itch.io/light-out-of-memory-again" target="_blank" rel="noopener noreferrer">Light Out Of Memory
               Again by Nerdo, Ro89</a>
           </iframe>
         </div>
 
         <div class="foldout" data-target="proj-lupin">L.U.P.I.N.</div>
-        <div id="proj-lupin" class="project-detail hidden">
+        <div id="proj-lupin" class="project-detail game-card hidden" data-game="lupin">
           <p>French interactive game made in Unity in 2 days to improve reading descriptions (Eduqclass 2025
             GameJam).</p>
           <iframe frameborder="0"
             src="https://itch.io/embed/3531668?border_width=5&amp;bg_color=ff8f8f&amp;fg_color=000000&amp;link_color=fa5c5c&amp;border_color=ff4343"
             width="560" height="175">
-            <a href="https://youssefjango.itch.io/lupin" target="_blank">L.U.P.I.N. by Nerdo</a>
+            <a href="https://youssefjango.itch.io/lupin" target="_blank" rel="noopener noreferrer">L.U.P.I.N. by Nerdo</a>
           </iframe>
         </div>
 
@@ -112,20 +137,20 @@
           <iframe frameborder="0"
             src="https://itch.io/embed/3315680?bg_color=3a009c&amp;fg_color=aeacaf&amp;link_color=fa5c5c&amp;border_color=db39ff"
             width="552" height="167">
-            <a href="https://youssefjango.itch.io/grandpasspell" target="_blank">GrandPa's Spell by Nerdo</a>
+            <a href="https://youssefjango.itch.io/grandpasspell" target="_blank" rel="noopener noreferrer">GrandPa's Spell by Nerdo</a>
           </iframe>
         </div>
 
         <div class="foldout" data-target="proj-race-better">Race Better</div>
         <div id="proj-race-better" class="project-detail hidden">
           <p>A fun race betting game for casual enjoyment.</p>
-          <a class="btn small" href="https://github.com/youssefjango/RaceBetter" target="_blank">GitHub</a>
+          <a class="btn small" href="https://github.com/youssefjango/RaceBetter" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
 
         <div class="foldout" data-target="proj-chasmed">ChasmED</div>
         <div id="proj-chasmed" class="project-detail hidden">
           <p>2D horror game made in Dingo's GameJam 2025.</p>
-          <a class="btn small" href="https://mokoolb.itch.io/chasm-ed" target="_blank">Play</a>
+          <a class="btn small" href="https://mokoolb.itch.io/chasm-ed" target="_blank" rel="noopener noreferrer">Play</a>
         </div>
 
         <div class="foldout" data-target="proj-flashlight-damned">Flashlight of the Damned</div>
@@ -133,7 +158,7 @@
           <iframe frameborder="0"
             src="https://itch.io/embed/3240284?bg_color=790000&amp;fg_color=000000&amp;link_color=fa5c5c&amp;border_color=4000ed"
             width="552" height="167">
-            <a href="https://youssefjango.itch.io/flashlightofthedamned" target="_blank">Flashlight of the Damned by
+            <a href="https://youssefjango.itch.io/flashlightofthedamned" target="_blank" rel="noopener noreferrer">Flashlight of the Damned by
               Nerdo, mondaydavid, ShobSabh, zarahbergeron, evandlr</a>
           </iframe>
         </div>
@@ -144,13 +169,14 @@
           <iframe frameborder="0"
             src="https://itch.io/embed/3315584?bg_color=4e4e4e&amp;fg_color=ffffff&amp;link_color=6a0000&amp;border_color=6f2bb8"
             width="552" height="167">
-            <a href="https://youssefjango.itch.io/dreamrunner" target="_blank">Dream Runner by Nerdo</a>
+            <a href="https://youssefjango.itch.io/dreamrunner" target="_blank" rel="noopener noreferrer">Dream Runner by Nerdo</a>
           </iframe>
         </div>
       </div>
     </section>
   </main>
 
+  <footer class="site-footer"><small>© Youssef Ben Mouny</small></footer>
 </body>
 
 </html>
